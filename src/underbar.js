@@ -333,6 +333,12 @@
   // input array. For a tip on how to make a copy of an array, see:
   // http://mdn.io/Array.prototype.slice
   _.shuffle = function(array) {
+    var arr = [];
+    _.each(array, function (element, index) {
+      var random = (Math.random() *(100 -1) +1);
+      return random > (Math.random() *(100 -1) +1) ? arr.push(element) : arr.unshift(element);
+    });
+    return arr;
   };
 
 
