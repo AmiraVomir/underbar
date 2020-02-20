@@ -369,9 +369,9 @@
   _.sortBy = function(collection, iterator) {
     return collection.sort(function(a,b) {
       if (typeof(iterator) === 'string') {
-        return a[iterator] - b[iterator] //? 1 : -1;
+        return a[iterator] - b[iterator]
       } else {
-        return iterator(a) - iterator(b) //? 1 : -1;
+        return iterator(a) - iterator(b)
       }
     });
   };
@@ -382,6 +382,11 @@
   // Example:
   // _.zip(['a','b','c','d'], [1,2,3]) returns [['a',1], ['b',2], ['c',3], ['d',undefined]]
   _.zip = function() {
+    var arr = [];
+    for (var i = 0; i < arguments.length; i++) {
+      arr[i] = _.pluck(arguments, i);
+    }
+    return arr;
   };
 
   // Takes a multidimensional array and converts it to a one-dimensional array.
