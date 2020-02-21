@@ -410,6 +410,19 @@
   // Takes an arbitrary number of arrays and produces an array that contains
   // every item shared between all the passed-in arrays.
   _.intersection = function() {
+    var arr = [];
+    for (var i = 0; i < arguments.length; i++) {
+      arr.push(arguments[i]);
+    }
+    var reduce = _.reduce(arr, function(arr1, arr2) {
+      return arr1.concat(arr2)
+    });
+    for (var j = 0; j < arr.length; j++) {
+      reduce = _.filter(reduce, function(element) {
+        return _.indexOf(arr[j], element)!== -1;
+      });
+    }
+    return Array.from(new Set(reduce));
   };
 
   // Take the difference between one array and a number of other arrays.
