@@ -428,6 +428,14 @@
   // Take the difference between one array and a number of other arrays.
   // Only the elements present in just the first array will remain.
   _.difference = function(array) {
+    var other = _.reduce([...arguments].slice(1), function(arr1, arr2) {
+      return arr1.concat(arr2);
+    });
+    var result = [];
+    for (var i = 0; i < array.length; i++) {
+      !_.contains(other, array[i]) ? result.push(array[i]) : null;
+    }
+    return _.uniq(result);
   };
 
   // Returns a function, that, when invoked, will only be triggered at most once
