@@ -11,18 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 node 12.16.1
 ```
 
-### Installing
-
-```
-npm install
-```
-
 ## Running the tests
-
-This repo uses live server to run its test. To start
-
 ```
-npm start
+run SpecRunner.html
 ```
 
 ## Built With
