@@ -1,9 +1,9 @@
-# underbar
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+# underbar-review
+This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on independently.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -33,7 +33,7 @@ npm start
 
 ## Authors
 
-* **Hieu Ho** - *Initial work* - AmiraVomir(https://github.com/AmiraVomir)
+* **Hieu Ho** - *Initial work* - [AmiraVomir](https://github.com/AmiraVomir)
 
 ## License
 
